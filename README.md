@@ -1,4 +1,4 @@
-# Учебный frontend-проект
+# Учебный frontend-проект kr1-html-css-shop
 
 ## Описание
 
@@ -32,3 +32,8 @@
 ## Ссылка на опубликованный проект
 
 GitHub Pages: https://nikak14.github.io/kr1-html-css-shop/
+
+
+## Ссылка на репозиторий:
+
+https://github.com/Nikak14/kr1-html-css-shop
