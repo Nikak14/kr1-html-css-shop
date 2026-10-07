@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Описание и сравнение товаров учебного интернет-магазина.">
+  <title>Товары подробно — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="top">
+    <div class="site-header">
+      <a class="site-logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product.html" aria-current="page">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <span>Товары</span>
+    </nav>
+
+    <section class="section" aria-labelledby="products-heading">
+      <h1 id="products-heading">Товары подробно</h1>
+      <p>Описание, цена и основные характеристики товаров учебного каталога.</p>
+
+      <article class="product-detail" id="lamp">
+        <div class="product-detail__media">
+          <img class="product-detail__image" src="images/lamp.svg" alt="Иллюстрация настольной лампы" width="640" height="480">
+        </div>
+        <div class="product-detail__content">
+          <p class="product-detail__category">Рабочее место</p>
+          <h2 class="product-detail__title">Настольная лампа</h2>
+          <p class="product-detail__description">Компактная лампа для освещения учебного стола.</p>
+          <p class="product-detail__price">Цена: 1000 руб.</p>
+          <a class="button product-detail__button" href="order.html#order-form">Оформить заявку</a>
+        </div>
+      </article>
+
+      <article class="product-detail" id="notebook">
+        <div class="product-detail__media">
+          <img class="product-detail__image" src="images/notebook.svg" alt="Иллюстрация блокнота" width="640" height="480" loading="lazy">
+        </div>
+        <div class="product-detail__content">
+          <p class="product-detail__category">Рабочее место</p>
+          <h2 class="product-detail__title">Блокнот</h2>
+          <p class="product-detail__description">Блокнот для конспектов и планирования занятий.</p>
+          <p class="product-detail__price">Цена: 1500 руб.</p>
+          <a class="button product-detail__button" href="order.html#order-form">Оформить заявку</a>
+        </div>
+      </article>
+
+      <article class="product-detail" id="backpack">
+        <div class="product-detail__media">
+          <img class="product-detail__image" src="images/backpack.svg" alt="Иллюстрация рюкзака" width="640" height="480" loading="lazy">
+        </div>
+        <div class="product-detail__content">
+          <p class="product-detail__category">Для занятий</p>
+          <h2 class="product-detail__title">Рюкзак</h2>
+          <p class="product-detail__description">Рюкзак для учебных принадлежностей и повседневных вещей.</p>
+          <p class="product-detail__price">Цена: 2000 руб.</p>
+          <a class="button product-detail__button" href="order.html#order-form">Оформить заявку</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="comparison" aria-labelledby="comparison-heading">
+      <h2 id="comparison-heading">Сравнение товаров</h2>
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <caption>Основные характеристики товаров</caption>
+          <thead>
+            <tr>
+              <th scope="col">Характеристика</th>
+              <th scope="col">Настольная лампа</th>
+              <th scope="col">Блокнот</th>
+              <th scope="col">Рюкзак</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Категория</th>
+              <td>Рабочее место</td>
+              <td>Рабочее место</td>
+              <td>Для занятий</td>
+            </tr>
+            <tr>
+              <th scope="row">Применение</th>
+              <td>Освещение стола</td>
+              <td>Записи и планы</td>
+              <td>Перенос вещей</td>
+            </tr>
+            <tr>
+              <th scope="row">Цена</th>
+              <td>1000 руб.</td>
+              <td>1500 руб.</td>
+              <td>2000 руб.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <aside class="aside-info">
+      <h2>Нужна помощь с выбором?</h2>
+      <p>Выберите товар в форме заявки или свяжитесь с нами через страницу контактов.</p>
+      <a href="contacts.html#feedback">Перейти к контактам</a>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+  <a class="back-to-top" href="#top">Наверх</a>
+</body>
+</html>
