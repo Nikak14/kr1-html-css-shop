@@ -38,29 +38,31 @@
     </section>
 
     <div class="catalog-layout">
-      <aside class="catalog-filter" aria-labelledby="filters-heading">
+      <aside class="catalog-filters catalog-filter" aria-labelledby="filters-heading">
         <h2 id="filters-heading">Фильтры</h2>
-        <div class="catalog-filter__group">
-          <h3>Категория</h3>
-          <ul class="catalog-filter__list">
-            <li><a href="#workspace">Рабочее место</a></li>
-            <li><a href="#study">Для занятий</a></li>
-          </ul>
-        </div>
-        <div class="catalog-filter__group">
-          <h3>Цена</h3>
-          <ul class="catalog-filter__list">
-            <li>До 1500 руб.</li>
-            <li>От 1500 руб.</li>
-          </ul>
-        </div>
-        <p class="catalog-filter__note">Категории ведут к разделам каталога; ценовые варианты показаны как макет.</p>
+        <form class="filters-form" action="#" method="get">
+          <fieldset>
+            <legend>Категория</legend>
+            <label><input type="checkbox" name="category" value="all"> Все товары</label>
+            <label><input type="checkbox" name="category" value="popular"> Популярные</label>
+            <label><input type="checkbox" name="category" value="new"> Новинки</label>
+          </fieldset>
+          <fieldset>
+            <legend>Цена</legend>
+            <label for="price-from">От</label>
+            <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+            <label for="price-to">До</label>
+            <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+          </fieldset>
+          <button class="button" type="submit">Применить</button>
+        </form>
+        <p class="catalog-filter__note">Фильтры показаны как учебный макет.</p>
       </aside>
 
-      <div class="catalog-layout__content">
+      <div class="catalog-products catalog-layout__content">
         <section class="section" id="workspace" aria-labelledby="workspace-heading">
           <h2 id="workspace-heading">Рабочее место</h2>
-          <div class="product-grid">
+          <div class="products-grid">
             <article class="product-card product-card--featured">
               <span class="product-card__badge">Хит</span>
               <img class="product-card__image" src="images/lamp.svg" alt="Настольная лампа" width="640" height="480" loading="lazy">
@@ -91,7 +93,7 @@
 
         <section class="section" id="study" aria-labelledby="study-heading">
           <h2 id="study-heading">Для занятий</h2>
-          <div class="product-grid">
+          <div class="products-grid">
             <article class="product-card">
               <img class="product-card__image" src="images/backpack.svg" alt="Рюкзак" width="640" height="480" loading="lazy">
               <p class="product-card__category">Для занятий</p>
