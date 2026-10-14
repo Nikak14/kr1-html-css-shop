@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header id="top">
-    <div class="site-header">
-      <a class="site-logo" href="index.html">ShopProject</a>
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
@@ -30,8 +30,8 @@
 
   <main>
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="index.html">Главная</a>
-      <span>Контакты</span>
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Контакты</span>
     </nav>
 
     <section class="section">
@@ -48,15 +48,15 @@
     </section>
 
     <section class="section" id="feedback">
-      <h2>Обратная связь</h2>
+      <h2 class="section__title">Обратная связь</h2>
       <p>
         Для отправки заявки используйте страницу оформления заявки.
       </p>
-      <a class="button" href="order.html#order-form">Перейти к форме</a>
+      <a class="button button--primary" href="order.html#order-form">Перейти к форме</a>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>

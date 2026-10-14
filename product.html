@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header id="top">
-    <div class="site-header">
-      <a class="site-logo" href="index.html">ShopProject</a>
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
@@ -29,9 +29,9 @@
 
   <main>
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="index.html">Главная</a>
-      <a href="catalog.html">Каталог</a>
-      <span>Товары</span>
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+      <span class="breadcrumbs__current">Товары</span>
     </nav>
 
     <section class="section" aria-labelledby="products-heading">
@@ -47,7 +47,7 @@
           <h2 class="product-detail__title">Настольная лампа</h2>
           <p class="product-detail__description">Компактная лампа для освещения учебного стола.</p>
           <p class="product-detail__price">Цена: 1000 руб.</p>
-          <a class="button product-detail__button" href="order.html#order-form">Оформить заявку</a>
+          <a class="button button--primary product-detail__button" href="order.html#order-form">Оформить заявку</a>
         </div>
       </article>
 
@@ -60,7 +60,7 @@
           <h2 class="product-detail__title">Блокнот</h2>
           <p class="product-detail__description">Блокнот для конспектов и планирования занятий.</p>
           <p class="product-detail__price">Цена: 1500 руб.</p>
-          <a class="button product-detail__button" href="order.html#order-form">Оформить заявку</a>
+          <a class="button button--primary product-detail__button" href="order.html#order-form">Оформить заявку</a>
         </div>
       </article>
 
@@ -73,13 +73,13 @@
           <h2 class="product-detail__title">Рюкзак</h2>
           <p class="product-detail__description">Рюкзак для учебных принадлежностей и повседневных вещей.</p>
           <p class="product-detail__price">Цена: 2000 руб.</p>
-          <a class="button product-detail__button" href="order.html#order-form">Оформить заявку</a>
+          <a class="button button--primary product-detail__button" href="order.html#order-form">Оформить заявку</a>
         </div>
       </article>
     </section>
 
     <section class="section" id="comparison" aria-labelledby="comparison-heading">
-      <h2 id="comparison-heading">Сравнение товаров</h2>
+      <h2 class="section__title" id="comparison-heading">Сравнение товаров</h2>
       <div class="comparison-table-wrap">
         <table class="comparison-table">
           <caption>Основные характеристики товаров</caption>
@@ -122,7 +122,7 @@
     </aside>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
