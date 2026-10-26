@@ -138,34 +138,37 @@
 
       <div class="reviews__layout">
         <form class="review-form" id="review-form">
-          <div class="review-form__field">
-            <label class="review-form__label" for="review-author">Ваше имя</label>
-            <input class="review-form__input" id="review-author" name="author" type="text" maxlength="40" placeholder="Гость">
-          </div>
+          <h3 class="review-form__title">Оставить отзыв</h3>
+          <div class="review-form__fields">
+            <div class="review-form__field">
+              <label class="review-form__label" for="review-author">Ваше имя</label>
+              <input class="review-form__input" id="review-author" name="author" type="text" maxlength="40" placeholder="Гость">
+            </div>
 
-          <div class="review-form__field">
-            <label class="review-form__label" for="review-product">Товар</label>
-            <select class="review-form__input" id="review-product" name="product" required>
-              <option value="">Выберите товар</option>
-              <option value="Настольная лампа">Настольная лампа</option>
-              <option value="Блокнот">Блокнот</option>
-              <option value="Настольный органайзер">Настольный органайзер</option>
-              <option value="Рюкзак">Рюкзак</option>
-              <option value="Пенал">Пенал</option>
-              <option value="Папка для документов">Папка для документов</option>
-            </select>
-          </div>
+            <div class="review-form__field">
+              <label class="review-form__label" for="review-product">Товар</label>
+              <select class="review-form__input" id="review-product" name="product" required>
+                <option value="">Выберите товар</option>
+                <option value="Настольная лампа">Настольная лампа</option>
+                <option value="Блокнот">Блокнот</option>
+                <option value="Настольный органайзер">Настольный органайзер</option>
+                <option value="Рюкзак">Рюкзак</option>
+                <option value="Пенал">Пенал</option>
+                <option value="Папка для документов">Папка для документов</option>
+              </select>
+            </div>
 
-          <div class="review-form__field">
-            <label class="review-form__label" for="review-rating">Оценка</label>
-            <select class="review-form__input" id="review-rating" name="rating" required>
-              <option value="">Выберите оценку</option>
-              <option value="5">5 из 5</option>
-              <option value="4">4 из 5</option>
-              <option value="3">3 из 5</option>
-              <option value="2">2 из 5</option>
-              <option value="1">1 из 5</option>
-            </select>
+            <div class="review-form__field">
+              <label class="review-form__label" for="review-rating">Оценка</label>
+              <select class="review-form__input" id="review-rating" name="rating" required>
+                <option value="">Выберите оценку</option>
+                <option value="5">5 из 5</option>
+                <option value="4">4 из 5</option>
+                <option value="3">3 из 5</option>
+                <option value="2">2 из 5</option>
+                <option value="1">1 из 5</option>
+              </select>
+            </div>
           </div>
 
           <div class="review-form__field">
@@ -179,7 +182,7 @@
 
         <div class="reviews__feed" aria-live="polite" aria-relevant="additions text">
           <h3 class="reviews__subtitle">Отзывы посетителей</h3>
-          <p class="reviews__empty" id="reviews-empty">В этом браузере пока нет добавленных отзывов. Вы можете оставить первый.</p>
+          <p class="reviews__empty" id="reviews-empty">На этом устройстве пока нет отзывов. Заполните форму выше, и ваш отзыв появится здесь.</p>
           <div class="reviews__list" id="reviews-list"></div>
         </div>
       </div>

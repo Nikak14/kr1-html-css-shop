@@ -349,15 +349,26 @@ a:focus-visible {
 
 .reviews__layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--space-lg);
-  align-items: start;
+  gap: var(--space-xl);
+  max-width: 840px;
 }
 
 .review-form {
-  padding: var(--space-lg);
+  padding: var(--space-xl);
   background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
+}
+
+.review-form__title {
+  margin: 0 0 var(--space-lg);
+  font-size: 22px;
+}
+
+.review-form__fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-md);
 }
 
 .review-form__field {
@@ -372,6 +383,7 @@ a:focus-visible {
 
 .review-form__input {
   width: 100%;
+  min-height: 44px;
   padding: 10px 12px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
@@ -386,11 +398,12 @@ a:focus-visible {
 }
 
 .review-form__textarea {
+  min-height: 120px;
   resize: vertical;
 }
 
 .review-form__note {
-  margin-bottom: 0;
+  margin: var(--space-md) 0 0;
   color: var(--color-muted);
   font-size: 14px;
 }
@@ -403,8 +416,8 @@ a:focus-visible {
 }
 
 .reviews__subtitle {
-  margin: 0 0 var(--space-sm);
-  font-size: 18px;
+  margin: 0 0 var(--space-md);
+  font-size: 22px;
 }
 
 .reviews__list {
@@ -452,21 +465,25 @@ a:focus-visible {
 }
 
 .faq__item {
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
   background-color: var(--color-surface);
   border-radius: var(--radius-md);
 }
 
 .faq__question {
-  padding: var(--space-md) var(--space-lg);
+  min-height: 64px;
+  padding: var(--space-lg);
   cursor: pointer;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .faq__answer {
   margin: 0;
-  max-width: 82ch;
+  max-width: 74ch;
   padding: 0 var(--space-lg) var(--space-lg);
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .aside-info {
@@ -775,9 +792,13 @@ a:focus-visible {
 
   .catalog-layout,
   .product-detail,
-  .order-page,
-  .reviews__layout {
+  .order-page {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .review-form__fields {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
   }
 
   .catalog-filters {
