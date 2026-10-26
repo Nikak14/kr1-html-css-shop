@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title">
+  <title id="title">Пенал</title>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#eaf9f3"/>
+      <stop offset="1" stop-color="#d7eee8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="36" fill="url(#background)"/>
+  <ellipse cx="320" cy="379" rx="220" ry="32" fill="#a9cfbf" opacity=".5"/>
+  <path d="M197 123l32 110M241 102l18 131M288 113l-1 120" stroke="#f1b64b" stroke-width="21" stroke-linecap="round"/>
+  <path d="M197 123l-8-23 17 17M241 102l-7-24 15 20M288 113l-10-23 19 19" fill="#254779"/>
+  <path d="M145 222c0-30 24-54 54-54h243c30 0 54 24 54 54v112c0 30-24 54-54 54H199c-30 0-54-24-54-54z" fill="#207d86"/>
+  <path d="M145 222c0-30 24-54 54-54h243c30 0 54 24 54 54v22H145z" fill="#39aab0"/>
+  <path d="M168 243h305" stroke="#155c6d" stroke-width="12" stroke-linecap="round"/>
+  <rect x="350" y="235" width="46" height="24" rx="8" fill="#f6cc68"/>
+  <path d="M375 257v31" stroke="#f6cc68" stroke-width="10" stroke-linecap="round"/>
+  <path d="M206 330h228" stroke="#b8e3df" stroke-width="11" stroke-linecap="round" opacity=".7"/>
+</svg>

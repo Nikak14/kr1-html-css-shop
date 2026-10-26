@@ -23,7 +23,6 @@
           <li class="site-nav__item"><a class="site-nav__link" href="student.html">О студенте</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
         </ul>
       </nav>
     </div>
@@ -69,7 +68,8 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card product-card--new">
+          <span class="product-card__badge">Новинка</span>
           <img class="product-card__image" src="images/notebook.svg" alt="Блокнот" width="640" height="480" loading="lazy">
           <p class="product-card__category">Рабочее место</p>
           <h3 class="product-card__title">Блокнот</h3>
@@ -81,7 +81,8 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card product-card--popular">
+          <span class="product-card__badge">Популярное</span>
           <img class="product-card__image" src="images/backpack.svg" alt="Рюкзак" width="640" height="480" loading="lazy">
           <p class="product-card__category">Для занятий</p>
           <h3 class="product-card__title">Рюкзак</h3>
@@ -92,7 +93,120 @@
             <button class="button button--primary product-card__button" type="button" data-product="Рюкзак">Заказать</button>
           </div>
         </article>
+
+        <article class="product-card">
+          <img class="product-card__image" src="images/organizer.svg" alt="Настольный органайзер" width="640" height="480" loading="lazy">
+          <p class="product-card__category">Рабочее место</p>
+          <h3 class="product-card__title">Настольный органайзер</h3>
+          <p class="product-card__description">Подставка с отделениями для ручек, заметок и мелочей.</p>
+          <p class="product-card__price">1200 руб.</p>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#organizer">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-product="Настольный органайзер">Заказать</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img class="product-card__image" src="images/pencil-case.svg" alt="Пенал" width="640" height="480" loading="lazy">
+          <p class="product-card__category">Для занятий</p>
+          <h3 class="product-card__title">Пенал</h3>
+          <p class="product-card__description">Компактный пенал для ручек, карандашей и других принадлежностей.</p>
+          <p class="product-card__price">700 руб.</p>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#pencil-case">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-product="Пенал">Заказать</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img class="product-card__image" src="images/folder.svg" alt="Папка для документов" width="640" height="480" loading="lazy">
+          <p class="product-card__category">Для занятий</p>
+          <h3 class="product-card__title">Папка для документов</h3>
+          <p class="product-card__description">Папка для хранения учебных материалов и распечаток.</p>
+          <p class="product-card__price">900 руб.</p>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#folder">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-product="Папка для документов">Заказать</button>
+          </div>
+        </article>
       </div>
+    </section>
+
+    <section class="section reviews" id="reviews" aria-labelledby="reviews-heading">
+      <h2 class="section__title" id="reviews-heading">Отзывы о товарах</h2>
+      <p>Оставьте отзыв о товаре и посмотрите его в списке ниже.</p>
+
+      <div class="reviews__layout">
+        <form class="review-form" id="review-form">
+          <div class="review-form__field">
+            <label class="review-form__label" for="review-author">Ваше имя</label>
+            <input class="review-form__input" id="review-author" name="author" type="text" maxlength="40" placeholder="Гость">
+          </div>
+
+          <div class="review-form__field">
+            <label class="review-form__label" for="review-product">Товар</label>
+            <select class="review-form__input" id="review-product" name="product" required>
+              <option value="">Выберите товар</option>
+              <option value="Настольная лампа">Настольная лампа</option>
+              <option value="Блокнот">Блокнот</option>
+              <option value="Настольный органайзер">Настольный органайзер</option>
+              <option value="Рюкзак">Рюкзак</option>
+              <option value="Пенал">Пенал</option>
+              <option value="Папка для документов">Папка для документов</option>
+            </select>
+          </div>
+
+          <div class="review-form__field">
+            <label class="review-form__label" for="review-rating">Оценка</label>
+            <select class="review-form__input" id="review-rating" name="rating" required>
+              <option value="">Выберите оценку</option>
+              <option value="5">5 из 5</option>
+              <option value="4">4 из 5</option>
+              <option value="3">3 из 5</option>
+              <option value="2">2 из 5</option>
+              <option value="1">1 из 5</option>
+            </select>
+          </div>
+
+          <div class="review-form__field">
+            <label class="review-form__label" for="review-text">Ваш отзыв</label>
+            <textarea class="review-form__input review-form__textarea" id="review-text" name="review" rows="4" minlength="10" maxlength="500" required></textarea>
+          </div>
+
+          <button class="button button--primary" type="submit">Добавить отзыв</button>
+          <p class="review-form__note" id="reviews-storage-note">Отзывы сохраняются только в вашем браузере и не отправляются на сервер.</p>
+        </form>
+
+        <div class="reviews__feed" aria-live="polite" aria-relevant="additions text">
+          <h3 class="reviews__subtitle">Отзывы посетителей</h3>
+          <p class="reviews__empty" id="reviews-empty">В этом браузере пока нет добавленных отзывов. Вы можете оставить первый.</p>
+          <div class="reviews__list" id="reviews-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-heading">
+      <h2 class="section__title" id="faq-heading">Часто задаваемые вопросы</h2>
+
+      <details class="faq__item">
+        <summary class="faq__question">Как сравнить товары?</summary>
+        <p class="faq__answer">Откройте <a href="product.html#comparison">таблицу сравнения</a>: она показывает категорию, применение и цену всех шести товаров. Кнопка «Подробнее» ведёт к описанию выбранного товара.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__question">Как оформить заявку?</summary>
+        <p class="faq__answer">Нажмите «Заказать» на главной странице, чтобы открыть форму в окне, или перейдите на <a href="order.html">страницу заявки</a>. Заполните обязательные поля и отправьте форму.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__question">Отправляется ли заявка продавцу?</summary>
+        <p class="faq__answer">Нет. Это учебный сайт без серверной обработки: браузер проверяет обязательные поля и показывает сообщение об успехе. Данные заявки продавцу не отправляются.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__question">Где найти контактную информацию?</summary>
+        <p class="faq__answer">Телефон, адрес и электронная почта указаны на <a href="contacts.html">странице «Контакты»</a>. Это демонстрационные данные учебного проекта; заявку можно заполнить отдельно.</p>
+      </details>
     </section>
 
     <aside class="aside-info">
@@ -102,7 +216,7 @@
     </aside>
   </main>
 
-  <footer class="site-footer" id="contacts">
+  <footer class="site-footer">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>

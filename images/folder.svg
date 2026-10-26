@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title">
+  <title id="title">Папка для документов</title>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#f4f1ff"/>
+      <stop offset="1" stop-color="#e1e7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="36" fill="url(#background)"/>
+  <ellipse cx="320" cy="403" rx="202" ry="27" fill="#b8b2d7" opacity=".45"/>
+  <path d="M207 83h226v259H207z" fill="#fff" transform="rotate(-7 320 212)"/>
+  <path d="M229 107h221v263H229z" fill="#f9fbff" transform="rotate(6 340 238)"/>
+  <path d="M259 155h143M259 190h143M259 225h115" stroke="#c4d5ee" stroke-width="12" stroke-linecap="round"/>
+  <path d="M130 190h145l30 31h200c17 0 30 13 30 30v135c0 18-14 32-32 32H151c-18 0-32-14-32-32V222c0-18 14-32 32-32z" fill="#2c5ab4"/>
+  <path d="M119 261c0-18 14-32 32-32h352c18 0 32 14 32 32v125c0 18-14 32-32 32H151c-18 0-32-14-32-32z" fill="#4d78c4"/>
+  <rect x="179" y="287" width="150" height="20" rx="10" fill="#b5cff1"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title">
+  <title id="title">Настольный органайзер</title>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#edf5ff"/>
+      <stop offset="1" stop-color="#dceaf9"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="36" fill="url(#background)"/>
+  <ellipse cx="320" cy="408" rx="202" ry="29" fill="#a9c1dc" opacity=".5"/>
+  <path d="M189 198h262l-24 198H213z" fill="#245d9b"/>
+  <path d="M206 231h228l-19 150H225z" fill="#3279bb"/>
+  <path d="M307 231v150M375 231v150" stroke="#174577" stroke-width="12"/>
+  <path d="M229 120l12 104M256 100l-3 124M282 131l-14 93" stroke="#f0ba58" stroke-width="16" stroke-linecap="round"/>
+  <path d="M229 120l-5-19 12 16M256 100l-7-20 14 18M282 131l-3-20 11 18" fill="#254779"/>
+  <rect x="319" y="143" width="15" height="82" rx="7" fill="#e9f0fa"/>
+  <rect x="345" y="118" width="15" height="107" rx="7" fill="#a7d0dc"/>
+  <rect x="383" y="160" width="43" height="65" rx="5" fill="#fff4c6"/>
+  <path d="M186 198h268v33H186z" fill="#174577"/>
+</svg>

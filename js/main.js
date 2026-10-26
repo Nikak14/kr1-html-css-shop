@@ -76,3 +76,100 @@ orderForm.addEventListener('submit', (event) => {
     orderDialog.close();
   }
 });
+
+const reviewForm = document.getElementById('review-form');
+
+if (reviewForm) {
+  const reviewsList = document.getElementById('reviews-list');
+  const reviewsEmpty = document.getElementById('reviews-empty');
+  const storageNote = document.getElementById('reviews-storage-note');
+  const reviewText = document.getElementById('review-text');
+  const storageKey = 'shopproject-reviews';
+  let reviews = [];
+
+  try {
+    const savedReviews = JSON.parse(localStorage.getItem(storageKey) || '[]');
+    if (Array.isArray(savedReviews)) {
+      reviews = savedReviews.filter((review) =>
+        review &&
+        typeof review.author === 'string' &&
+        typeof review.product === 'string' &&
+        typeof review.rating === 'string' &&
+        typeof review.text === 'string'
+      ).slice(0, 20);
+    }
+  } catch {
+    storageNote.textContent = 'Сохранение в браузере недоступно. Отзыв будет виден до обновления страницы.';
+  }
+
+  const addReviewToPage = (review, toBeginning = false) => {
+    const card = document.createElement('article');
+    card.className = 'review-card';
+
+    const meta = document.createElement('div');
+    meta.className = 'review-card__meta';
+
+    const author = document.createElement('strong');
+    author.className = 'review-card__author';
+    author.textContent = review.author;
+
+    const rating = document.createElement('span');
+    rating.className = 'review-card__rating';
+    rating.textContent = `Оценка: ${review.rating} из 5`;
+
+    const product = document.createElement('p');
+    product.className = 'review-card__product';
+    product.textContent = review.product;
+
+    const text = document.createElement('p');
+    text.className = 'review-card__text';
+    text.textContent = review.text;
+
+    meta.append(author, rating);
+    card.append(meta, product, text);
+    if (toBeginning) {
+      reviewsList.prepend(card);
+    } else {
+      reviewsList.append(card);
+    }
+    reviewsEmpty.hidden = true;
+    return card;
+  };
+
+  reviews.forEach((review) => addReviewToPage(review));
+
+  reviewText.addEventListener('input', () => reviewText.setCustomValidity(''));
+
+  reviewForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!reviewForm.reportValidity()) return;
+
+    const text = reviewText.value.trim();
+    if (text.length < 10) {
+      reviewText.setCustomValidity('Напишите не менее 10 символов отзыва.');
+      reviewText.reportValidity();
+      return;
+    }
+
+    const review = {
+      author: document.getElementById('review-author').value.trim() || 'Гость',
+      product: document.getElementById('review-product').value,
+      rating: document.getElementById('review-rating').value,
+      text,
+    };
+
+    reviews.unshift(review);
+    reviews = reviews.slice(0, 20);
+    const newCard = addReviewToPage(review, true);
+    if (reviewsList.children.length > 20) reviewsList.lastElementChild.remove();
+    reviewForm.reset();
+    newCard.tabIndex = -1;
+    newCard.focus();
+
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(reviews));
+    } catch {
+      storageNote.textContent = 'Сохранение в браузере недоступно. Отзыв будет виден до обновления страницы.';
+    }
+  });
+}
